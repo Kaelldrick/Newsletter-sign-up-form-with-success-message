@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <!-- Sign-up form start -->
+  <section class="sign-up">
+    <div class="sign-up__content">
+      <h1 class="sign-up__title">Stay updated!</h1>
+      <p class="sign-up__description">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="sign-up__list">
+        <li class="sign-up__item"><img src="assets/images/icon-list.svg" alt="icon-list">Product discovery and building
+          what matters</li>
+        <li class="sign-up__item"><img src="assets/images/icon-list.svg" alt="icon-list">Measuring to ensure updates are
+          a success</li>
+        <li class="sign-up__item"><img src="assets/images/icon-list.svg" alt="icon-list">And much more!</li>
+      </ul>
+      <form class="sign-up__form">
+        <label for="email" class="sign-up__label">Email address<span class="sign-up__text"></span></label>
+        <input type="email" name="email" id="email" required placeholder="email@company.com" class="sign-up__input">
+        <button class="sign-up__button">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+    <!-- Sign-up form end -->
+    <div class="sign-up__img"></div>
+  </section>
+  <!-- Success message start -->
+  <div class="message">
+    <div class="sign-up-message">
+      <img class="sign-up-message__img" src="assets/images/icon-success.svg" alt="icon-success">
+      <h2 class="sign-up-message__title">Thanks for subscribing!</h2>
+      <p class="sign-up-message__description">A confirmation email has been sent to <span></span>.
+        Please open it and click the button inside to confirm your subscription.</p>
+      <button class="sign-up-message__button sign-up__button">Dismiss message</button>
+    </div>
+  </div>
+  <!-- Success message end -->
+  <script src="app.js"></script>
+</body>
+</html>

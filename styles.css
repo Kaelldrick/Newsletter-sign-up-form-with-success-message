@@ -1,0 +1,205 @@
+:root {
+  /* Primary */
+  --Tomato: hsl(4, 100%, 67%);
+  /* Neutral */
+  --Dark_Slate_Grey: hsl(234, 29%, 20%);
+  --Charcoal_Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Charcoal_Grey);
+}
+
+.sign-up {
+  background-color: var(--White);
+  display: flex;
+  max-width: 928px;
+  height: 641px;
+  border-radius: 33px;
+  padding: 25px;
+  column-gap: 62px;
+
+  & .sign-up__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    justify-content: center;
+
+    & .sign-up__title {
+      font-size: 57px;
+      font-weight: 700;
+      color: var(--Charcoal_Grey);
+    }
+
+    & .sign-up__description {
+      margin: 30px 0;
+    }
+
+    & .sign-up__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      margin-bottom: 40px;
+
+      & .sign-up__item {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+      }
+    }
+
+    & .sign-up__form {
+      display: flex;
+      flex-direction: column;
+
+      & .sign-up__label {
+        color: var(--Dark_Slate_Grey);
+        font-weight: 700;
+        font-size: 12px;
+        margin-bottom: 10px;
+        display: flex;
+
+        & span {
+          margin-left: auto;
+          color: var(--Tomato);
+          font-weight: 700;
+        }
+
+      }
+
+      & .sign-up__input {
+        border-radius: 8px;
+        border: 1px solid var(--Grey);
+        padding: 20px 20px;
+        font-weight: 500;
+
+        &:user-invalid {
+          background-color: #ffe8e6;
+          border: 1px solid #bb7c77;
+          color: #d8786c;
+        }
+      }
+    }
+  }
+
+  & .sign-up__img {
+    min-width: 400px;
+    height: 593px;
+    background-image: url("assets/images/illustration-sign-up-desktop.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.sign-up-message {
+  max-width: 503px;
+  height: 519px;
+  border-radius: 33px;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  padding: 42px 62px;
+
+  & .sign-up-message__img {
+    align-self: flex-start;
+    margin-bottom: 40px;
+  }
+
+  & .sign-up-message__title {
+    color: var(--Dark_Slate_Grey);
+    font-size: 57px;
+  }
+
+  & .sign-up-message__description {
+    color: var(--Dark_Slate_Grey);
+    margin-top: 22px;
+    line-height: 1.5;
+
+    & span {
+      color: var(--Dark_Slate_Grey);
+      font-weight: 700;
+    }
+  }
+
+  & .sign-up-message__button {
+    margin-top: auto;
+  }
+}
+
+.sign-up__button {
+  padding: 20px 0;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  color: var(--White);
+  background-color: var(--Dark_Slate_Grey);
+  border-radius: 10px;
+  margin-top: 25px;
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #fe527a, #ff6a3a);
+    box-shadow: -6px 0px 34px -5px #fe527a, 0px 10px 34px -5px #ff6a3a;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.message {
+  display: none;
+}
+
+@media screen and (width<=460px) {
+  .sign-up-message {
+    border-radius: 0;
+    min-height: 100vh;
+    padding: 149px 25px 39px;
+
+    & .sign-up-message__title {
+      font-size: 40px;
+    }
+  }
+}
+
+
+@media screen and (width<=900px) {
+  .sign-up {
+    flex-direction: column;
+    max-width: 375px;
+    height: auto;
+    padding: 0 0 25px;
+    border-radius: 0;
+
+    & .sign-up__content {
+      margin: 0 25px;
+
+      & .sign-up__title {
+        font-size: 40px;
+        margin-top: 38px;
+      }
+    }
+
+    & .sign-up__img {
+      order: -1;
+      background-image: url("assets/images/illustration-sign-up-mobile.svg");
+      min-width: 375px;
+      height: 284px;
+    }
+  }
+}
